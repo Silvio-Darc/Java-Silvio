@@ -1,0 +1,56 @@
+public void maiorNotas() {
+        Scanner teclado = new Scanner(System.in);
+
+        int qtdAlunos = teclado.nextInt();
+
+        float[] notas = new float[qtdAlunos];
+        float media = 0;
+        for (int i = 0; i < qtdAlunos; i++){
+            float entrada = teclado.nextFloat();
+            notas[i] = entrada;
+            media += entrada;
+        }
+        media /= qtdAlunos;
+        System.out.printf("Média: %.1f\n", media);
+
+        for (float i : notas){
+            if (i > media){
+                System.out.printf("%.1f\n", i);
+            }
+        }
+}
+
+public void qtdRepeticoes(){
+        int n = teclado.nextInt();
+        int[] v = new int[n];
+        for(int i = 0; i<n ; i++){
+                v[i] = teclado.nextInt();
+        }
+        int k = teclado.nextInt();
+        System.out.printf("Índices de %d:\n", k)
+        for (int i = 0; i<n ; i++){
+                if (v[i] == k){
+                        System.out.printf("%d\n", i);
+                }
+        }
+}
+
+public void atualizaFila(){
+        int n = teclado.nextInt();
+        int[] v = new int[n];
+        for (int i = 0; i < n; i++){
+            float entrada = teclado.nextInt();
+            v[i] = entrada;
+        }
+        System.out.println("Lista concluída. Digite agora um valor e a posição que ele irá substituir")
+        int k = teclado.nextInt;
+        int p = teclado.nextInt;
+        bool entrou = False;
+        v[p] = k;
+        for (int i = p; i < n; i++){
+                int prox = v[i+1];
+                v[i] = prox;
+
+        }
+}
+
